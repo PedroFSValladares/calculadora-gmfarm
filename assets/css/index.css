@@ -1,0 +1,16 @@
+.card{
+    border-radius: 1rem;
+    color: white;
+}
+.input{
+    background-color: #b3d2c2;
+}
+.input:focus{
+    background-color: #d3f0e0;
+}
+.input:read-only{
+    background-color: #b3d2c2;
+}
+.input-result:read-only{
+    background-color: #e29e66;
+}
