@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,12 +9,9 @@
         <title>Calculadora</title>
     </head>
     <body>
-        <div class="container">
-            <h1>CALCULO DE RECEITA</h1>
-        </div>
         <div class="row">
             <div class="col-sm-12 col-md-8 col-lg-6 col-lx-5 my-auto mx-auto">
-                <form class="form" method="post">
+                <form class="form needs-validation" method="post" novalidate>
                     <div class="card p-4">  
                         <div class="card mb-2 bg-success">
                             <h2 class="d-flex justify-content-center my-4"><b>CALCULADORA - GM FARM</b></h2>
@@ -27,14 +24,16 @@
                                                     <label for="valor1" class="form-label">Valor 1</label>
                                                 </div>
                                                 <div class="col">
-                                                    <input type="text" class="form-control input active" id="valor1" name="value1">
+                                                    <input type="text" class="form-control input active" id="valor1" name="value1" required>
+                                                    <div class="invalid-feedback">Preencha este campo</div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col">
                                             <div class="row">
                                                 <div class="col">
-                                                    <input type="text" class="form-control input active" id="valor3" name="value3">
+                                                    <input type="text" class="form-control input active" id="valor3" name="value3" required>
+                                                    <div class="invalid-feedback">Preencha este campo</div>
                                                 </div>
                                                 <div class="col-3 p-0 text-center">
                                                     <label for="valor3" class="form-label">Valor 3</label>
@@ -49,7 +48,8 @@
                                                     <label for="valor2" class="form-label">Valor 2</label>
                                                 </div>
                                                 <div class="col">
-                                                    <input type="text" class="form-control input active" id="valor2" name="value2">
+                                                    <input type="text" class="form-control input active" id="valor2" name="value2" required>
+                                                    <div class="invalid-feedback">Preencha este campo</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -85,13 +85,9 @@
                                 height="100%"
                             />                               
                         </div>
-                        <div class="row justify-content-end me-1"> 
-                            <div class="col-2">
-                                <input type="submit" class="form-control btn btn-primary" value="Calcular">
-                            </div>
-                            <div class="col-2">
-                                <button class="form-control btn btn-danger">Limpar</button>
-                            </div>
+                        <div class="d-flex justify-content-end"> 
+                            <input type="submit" class="btn btn-primary me-2" value="Calcular">
+                            <button class="btn btn-danger me-2">Limpar</button> 
                         </div>
                     </div>  
                 </form>

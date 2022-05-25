@@ -1,8 +1,12 @@
 <?php 
     function regraDeTres(){
-        $var = $_POST['value1'];
-        $result = $_POST['value2'] * $_POST['value3'] / $var;
-        return $result;
+        $var = trimReplace($_POST['value1']);
+        $result = trimReplace($_POST['value2']) * trimReplace($_POST['value3']) / $var;
+        return number_format($result, 2, ".", "");
+    }
+
+    function trimReplace($value){
+        return str_replace(",", ".", trim($value));
     }
     //var_dump($_POST);
     echo regraDeTres();

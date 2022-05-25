@@ -14,3 +14,6 @@
 .input-result:read-only{
     background-color: #e29e66;
 }
+.invalid-feedback{
+    color: rgb(209, 4, 4);
+}
