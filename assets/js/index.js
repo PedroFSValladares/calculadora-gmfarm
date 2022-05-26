@@ -35,7 +35,7 @@ inputs.forEach((element, i) => {
     element.addEventListener('input', (e) => {
         const val = removeCommas(element)
         if(val == ""){
-            feedback[i].innerHTML = "O campo deve ser preenchido."
+            feedback[i].innerHTML = "Preencha este campo."
             element.classList.add('is-invalid')
         }else if(isNaN(val)){
             feedback[i].innerHTML = "Valor inválido."
@@ -50,7 +50,7 @@ function validate(){
     var result = true
     inputs.forEach((element, i) => {
         if(element.value == ""){
-            feedback[i].innerHTML = "O campo deve ser preenchido."
+            feedback[i].innerHTML = "Preencha este campo."
             element.classList.add('is-invalid')
             result = false;
         }
